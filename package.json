@@ -17,8 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "format": "npx prettier src/{components,css,utils}/**/*.{js,css} --write",
-    "format-check": "npx prettier src/{components, css,utils}/**/*.{js,css} --check"
+    "format": "prettier src/{components,css,utils}/**/*.{js,css} --write",
+    "format-check": "prettier src/{components,css,utils}/**/*.{js,css} --check"
   },
   "eslintConfig": {
     "extends": [
@@ -39,6 +39,6 @@
     ]
   },
   "devDependencies": {
-    "prettier": "3.1.0"
+    "prettier": "^3.1.0"
   }
 }
