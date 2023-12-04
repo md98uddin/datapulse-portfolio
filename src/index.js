@@ -1,13 +1,41 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { PageNotFound } from "./components/screens/PageNotFound";
+import { AboutUs } from "./components/screens/AboutUs";
+import { Pricing } from "./components/screens/Pricing";
+import { Portfolio } from "./components/screens/Portfolio";
+import { Services } from "./components/screens/Services";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <PageNotFound />,
+  },
+  { path: "/services", element: <Services /> },
+  {
+    path: "/about-us",
+    element: <AboutUs />,
+  },
+  {
+    path: "/portfolio",
+    element: <Portfolio />,
+  },
+  ,
+  {
+    path: "/pricing",
+    element: <Pricing />,
+  },
+]);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

@@ -1,14 +1,17 @@
 import React from "react";
-import { Navbar } from "./shared/Navbar";
+import { Navbar } from "../shared/Navbar";
 
-export const ContactUs = () => {
+export const Pricing = () => {
   return (
     <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="HomePage.css" />
+        <title>TechSolve Hub - IT Solutions</title>
+      </head>
       <body>
-        <header>
-          <div class="logo">Your Logo</div>
-          <Navbar />
-        </header>
+        <Navbar />
 
         <main>
           <section id="consulting-form" class="form-section">

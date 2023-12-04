@@ -1,28 +1,33 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "../../css/Navbar.css";
 
 export const Navbar = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <a href="#home">Home</a>
-        </li>
-        <li>
-          <a href="#services">Services</a>
-        </li>
-        <li>
-          <a href="#portfolio">Portfolio</a>
-        </li>
-        <li>
-          <a href="#about">About Us</a>
-        </li>
-        <li>
-          <a href="#blog">Blog</a>
-        </li>
-        <li>
-          <a href="#contact">Contact Us</a>
-        </li>
-      </ul>
-    </nav>
+    <>
+      <header>
+        <h1>DataPulse Techs</h1>
+        <p>Innovative IT Solutions for a Connected World</p>
+      </header>
+      <nav>
+        <ul>
+          <li>
+            <Link to={"/"}>Home</Link>
+          </li>
+          <li>
+            <Link to={"/services"}>Services</Link>
+          </li>
+          <li>
+            <Link to={"/portfolio"}>Portfolio</Link>
+          </li>
+          <li>
+            <Link to={"/about-us"}>About Us</Link>
+          </li>
+          <li>
+            <Link to={"/pricing"}>Pricing</Link>
+          </li>
+        </ul>
+      </nav>
+    </>
   );
 };

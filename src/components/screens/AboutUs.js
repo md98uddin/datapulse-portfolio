@@ -1,15 +1,12 @@
 import React from "react";
-import "../css/AboutUs.css";
-import { Navbar } from "./shared/Navbar";
+import "../../css/AboutUs.css";
+import { Navbar } from "../shared/Navbar";
 
 export const AboutUs = () => {
   return (
     <html lang="en">
       <body>
-        <header>
-          <div class="logo">Your Logo</div>
-          <Navbar />
-        </header>
+        <Navbar />
 
         <main>
           <section id="about" class="about-section">

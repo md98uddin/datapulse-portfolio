@@ -1,7 +1,7 @@
 import React from "react";
-import { ServicesCard } from "./shared/ServicesCard";
-import "../css/Home.css";
-import { Navbar } from "./shared/Navbar";
+import { ServicesCard } from "../shared/ServicesCard";
+import "../../css/Home.css";
+import { Navbar } from "../shared/Navbar";
 
 export const HomePage = () => {
   return (
@@ -13,11 +13,6 @@ export const HomePage = () => {
         <title>TechSolve Hub - IT Solutions</title>
       </head>
       <body>
-        <header>
-          <h1>DataPulse Techs</h1>
-          <p>Innovative IT Solutions for a Connected World</p>
-        </header>
-
         <Navbar />
 
         <section id="home">

@@ -1,17 +1,15 @@
 import "./App.css";
-import { HomePage } from "./components/Home";
-import { AboutUs } from "./components/AboutUs";
+import { HomePage } from "./components/screens/Home";
 import { Footer } from "./components/shared/Footer";
-import { ContactUs } from "./components/ContactUs";
 
 function App() {
   return (
     <div className="App">
+      <body>
+        <HomePage />
+        <Footer />
+      </body>
       {/* needs routing for different page  */}
-      {/* <HomePage /> */}
-      {/* <AboutUs /> */}
-      <ContactUs />
-      <Footer />
     </div>
   );
 }
