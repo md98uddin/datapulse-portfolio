@@ -1,13 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaMailBulk, FaPhone } from "react-icons/fa";
 import "../../css/Navbar.css";
 
 export const Navbar = () => {
   return (
     <>
       <header>
-        <h1>DataPulse Techs</h1>
-        <p>Innovative IT Solutions for a Connected World</p>
+        <h1 className="nav-header">DataPulse Techs</h1>
+        <h2 className="nav-title">
+          Innovative IT Solutions for a Connected World
+        </h2>
       </header>
       <nav>
         <ul>
@@ -25,6 +28,16 @@ export const Navbar = () => {
           </li>
           <li>
             <Link to={"/pricing"}>Pricing</Link>
+          </li>
+          <li>
+            <a href="tel:6031112298" style={{ marginLeft: "auto" }}>
+              <FaPhone /> 603-111-2298
+            </a>
+          </li>
+          <li>
+            <a href="mailto:abc@123.com" style={{ marginLeft: "auto" }}>
+              <FaMailBulk /> Email Us
+            </a>
           </li>
         </ul>
       </nav>

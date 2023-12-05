@@ -5,7 +5,7 @@ export const Portfolio = () => {
   return (
     <div>
       <Navbar />
-      <h1>Portfolio</h1>
+      <h1 className="header">Portfolio</h1>
     </div>
   );
 };

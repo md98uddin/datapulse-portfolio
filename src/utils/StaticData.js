@@ -9,7 +9,7 @@ export const services = [
   {
     id: "2",
     title: "Mobile App Development",
-    description: "Custo development for your needs",
+    description: "Custom development for your needs",
     img: "/images/mobile_dev_placeholder.png",
     features: ["Abc", "123"],
   },
