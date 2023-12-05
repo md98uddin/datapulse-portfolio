@@ -1,6 +1,19 @@
 nav {
-  background-color: #444;
+  background: radial-gradient(
+    circle at -4% -12.9%,
+    rgb(74, 98, 110) 0.3%,
+    rgb(30, 33, 48) 90.2%
+  );
   padding: 10px 0;
+}
+
+header {
+  background: radial-gradient(
+    circle at -4% -12.9%,
+    rgb(74, 98, 110) 0.3%,
+    rgb(30, 33, 48) 90.2%
+  );
+  height: 8em;
 }
 
 nav ul {
@@ -8,11 +21,16 @@ nav ul {
   margin: 0;
   padding: 0;
   text-align: center;
+  margin-left: 2em;
+  margin-right: 0;
+  display: flex;
 }
 
 nav li {
   display: inline;
-  margin-right: 20px;
+  margin-right: 2em;
+  font-size: 36px;
+  letter-spacing: 0.15em;
 }
 
 nav a {
@@ -20,4 +38,9 @@ nav a {
   color: #fff;
   font-weight: bold;
   font-size: 16px;
+}
+
+.nav-title {
+  font-size: 1em;
+  padding-bottom: 1em;
 }

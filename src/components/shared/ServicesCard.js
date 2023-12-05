@@ -5,7 +5,7 @@ import { services } from "../../utils/StaticData";
 export const ServicesCard = () => {
   return (
     <div class="main">
-      <h1>Services We Offer</h1>
+      <h1 className="header">Services We Offer</h1>
       <ul class="cards">
         {services.map((service) => (
           <li class="cards_item">
