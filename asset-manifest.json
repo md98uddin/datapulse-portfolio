@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/datapulse-portfolio/static/css/main.a4c791e2.css",
-    "main.js": "/datapulse-portfolio/static/js/main.61c434aa.js",
+    "main.js": "/datapulse-portfolio/static/js/main.12d1f5e6.js",
     "static/js/787.6afea96a.chunk.js": "/datapulse-portfolio/static/js/787.6afea96a.chunk.js",
     "index.html": "/datapulse-portfolio/index.html",
     "main.a4c791e2.css.map": "/datapulse-portfolio/static/css/main.a4c791e2.css.map",
-    "main.61c434aa.js.map": "/datapulse-portfolio/static/js/main.61c434aa.js.map",
+    "main.12d1f5e6.js.map": "/datapulse-portfolio/static/js/main.12d1f5e6.js.map",
     "787.6afea96a.chunk.js.map": "/datapulse-portfolio/static/js/787.6afea96a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a4c791e2.css",
-    "static/js/main.61c434aa.js"
+    "static/js/main.12d1f5e6.js"
   ]
 }
