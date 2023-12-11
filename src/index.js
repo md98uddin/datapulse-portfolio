@@ -3,14 +3,22 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  createHashRouter,
+  RouterProvider,
+} from "react-router-dom";
 import { PageNotFound } from "./components/screens/PageNotFound";
 import { AboutUs } from "./components/screens/AboutUs";
 import { Pricing } from "./components/screens/Pricing";
 import { Portfolio } from "./components/screens/Portfolio";
 import { Services } from "./components/screens/Services";
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,

@@ -5,25 +5,16 @@ import { Navbar } from "../shared/Navbar";
 
 export const HomePage = () => {
   return (
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="HomePage.css" />
-        <title>TechSolve Hub - IT Solutions</title>
-      </head>
-      <body>
-        <Navbar />
+    <div>
+      <Navbar />
+      <section id="home">
+        <h2>Welcome to DataPulse Techs</h2>
+        <p>Your trusted partner for innovative IT solutions.</p>
+      </section>
 
-        <section id="home">
-          <h2>Welcome to DataPulse Techs</h2>
-          <p>Your trusted partner for innovative IT solutions.</p>
-        </section>
+      <ServicesCard />
 
-        <ServicesCard />
-
-        <h3 class="made_by">Made with ♡</h3>
-      </body>
-    </html>
+      <h3 className="made_by">Made with ♡</h3>
+    </div>
   );
 };

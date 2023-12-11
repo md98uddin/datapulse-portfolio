@@ -5,10 +5,8 @@ import { Footer } from "./components/shared/Footer";
 function App() {
   return (
     <div className="App">
-      <body>
-        <HomePage />
-        <Footer />
-      </body>
+      <HomePage />
+      <Footer />
       {/* needs routing for different page  */}
     </div>
   );
