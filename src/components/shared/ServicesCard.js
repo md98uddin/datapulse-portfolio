@@ -4,19 +4,19 @@ import { services } from "../../utils/StaticData";
 
 export const ServicesCard = () => {
   return (
-    <div class="main">
+    <div className="main">
       <h1 className="header">Services We Offer</h1>
-      <ul class="cards">
+      <ul className="cards">
         {services.map((service) => (
-          <li class="cards_item">
-            <div class="card">
-              <div class="card_image">
+          <li className="cards_item" key={service.id}>
+            <div className="card">
+              <div className="card_image">
                 <img src={window.location.origin + service.img} />
               </div>
-              <div class="card_content">
-                <h2 class="card_title">{service.title}</h2>
-                <p class="card_text">{service.description}</p>
-                <button class="btn card_btn">Read More</button>
+              <div className="card_content">
+                <h2 className="card_title">{service.title}</h2>
+                <p className="card_text">{service.description}</p>
+                <button className="btn card_btn">Read More</button>
               </div>
             </div>
           </li>
