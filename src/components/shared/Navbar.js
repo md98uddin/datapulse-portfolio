@@ -35,7 +35,10 @@ export const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="mailto:datapulsetechs@gmail.com" style={{ marginLeft: "auto" }}>
+            <a
+              href="mailto:datapulsetechs@gmail.com"
+              style={{ marginLeft: "auto" }}
+            >
               <FaMailBulk /> Email Us
             </a>
           </li>
