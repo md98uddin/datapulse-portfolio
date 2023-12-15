@@ -28,6 +28,14 @@ body {
   text-align: center;
 }
 
+.title-text {
+  color: #ffffff;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 24px;
+}
+
 .p-text {
   color: #ffffff;
   font-family: "Helvetica Neue", sans-serif;
@@ -51,4 +59,20 @@ body {
 .icon-margin {
   margin-left: 1em;
   color: rgb(255, 255, 255);
+}
+
+.btn-style {
+  background: radial-gradient(
+    circle at -4% -12.9%,
+    rgb(74, 98, 110) 0.3%,
+    rgb(30, 33, 48) 90.2%
+  );
+}
+
+.active-btn {
+  background: radial-gradient(
+    circle at -4% -12.9%,
+    rgb(155, 171, 179) 0.3%,
+    rgb(83, 87, 112) 90.2%
+  );
 }

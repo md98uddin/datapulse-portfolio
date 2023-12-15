@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   FaAngleUp,
   FaHeadSideVirus,
@@ -8,18 +8,28 @@ import {
   FaDatabase,
   FaXing,
 } from "react-icons/fa";
+import { MdDataArray } from "react-icons/md";
+import { BsGraphUp } from "react-icons/bs";
 import { Navbar } from "../shared/Navbar";
-import { services } from "../../utils/StaticData";
+import { filterKeys, services } from "../../utils/StaticData";
 import "../../css/Services.css";
 import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
   Typography,
+  Button,
+  ButtonGroup,
 } from "@mui/material";
+import { filterServices } from "../../utils/HelpFunctions";
 
 export const Services = () => {
   const [expandId, setExpandId] = useState("1");
+  const [filterKey, setFilter] = useState("");
+
+  useEffect(() => {
+    console.log(filterKey);
+  }, [filterKey]);
 
   function renderIcon(serviceId) {
     switch (serviceId) {
@@ -32,17 +42,51 @@ export const Services = () => {
       case "4":
         return <FaDatabase className="icon-margin" />;
       case "5":
-        return <FaHeadSideVirus className="icon-margin" />;
+        return <BsGraphUp className="icon-margin" />;
+      case "6":
+        return <MdDataArray className="icon-margin" />;
       default:
         return <FaXing />;
     }
   }
+
+  function handleFilterChange(e, filter) {
+    if (filter == "Clear X") {
+      setFilter("");
+    } else {
+      setFilter(filter);
+    }
+  }
+
+  function buttonStyling(filter) {
+    if (filter == filterKey) {
+      return "p-text active-btn";
+    }
+
+    return "p-text btn-style";
+  }
+
   return (
-    <div className="services-main" style={{ margin: 0, height: "100%" }}>
+    <div
+      className="services-main"
+      style={{ margin: 0, height: "100%", textAlign: "center" }}
+    >
       <Navbar />
-      <h1 className="header request-header">Services we offer</h1>
+      <h1 className="header request-header">Our Services</h1>
       <div>
-        {services.map((service) => (
+        <h1 className="title-text">Filter By</h1>
+        <ButtonGroup variant="contained" className="p-text">
+          {filterKeys.map((filter) => (
+            <Button
+              className={buttonStyling(filter)}
+              key={filter}
+              onClick={(e) => handleFilterChange(e, filter)}
+            >
+              {filter}
+            </Button>
+          ))}
+        </ButtonGroup>
+        {filterServices(filterKey, services).map((service) => (
           <Accordion
             expanded={expandId == service.id ? true : false}
             key={service.id}
