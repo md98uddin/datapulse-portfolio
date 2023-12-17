@@ -1,13 +1,14 @@
 import React from "react";
 import { Navbar } from "../shared/Navbar";
 import "../../css/Pricing.css";
+import { Footer } from "../shared/Footer";
 
 export const Pricing = () => {
   return (
     <>
       <Navbar />
       <div className="container">
-        <h1 className="header request-header">Request for a quote</h1>
+        <h1 className="request-header title-text">Request for a quote</h1>
         <form className="align-items">
           <label>
             Name <span className="required">*</span>
@@ -29,6 +30,7 @@ export const Pricing = () => {
           <textarea tabIndex={5}></textarea>
         </form>
       </div>
+      <Footer />
     </>
   );
 };

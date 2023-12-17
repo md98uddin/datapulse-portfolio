@@ -1,5 +1,6 @@
 import React from "react";
 import "../../css/AboutUs.css";
+import { Footer } from "../shared/Footer";
 import { Navbar } from "../shared/Navbar";
 
 export const AboutUs = () => {
@@ -41,6 +42,7 @@ export const AboutUs = () => {
           </div>
         </section>
       </main>
+      <Footer />
     </div>
   );
 };

@@ -6,8 +6,6 @@ function App() {
   return (
     <div className="App">
       <HomePage />
-      <Footer />
-      {/* needs routing for different page  */}
     </div>
   );
 }

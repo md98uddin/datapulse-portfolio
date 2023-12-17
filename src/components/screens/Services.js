@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
   FaAngleUp,
-  FaHeadSideVirus,
   FaDesktop,
   FaTablet,
   FaCloud,
@@ -22,9 +21,11 @@ import {
   ButtonGroup,
 } from "@mui/material";
 import { filterServices } from "../../utils/HelpFunctions";
+import { ServicesBrochure } from "../shared/ServicesBrochure";
+import { Footer } from "../shared/Footer";
 
 export const Services = () => {
-  const [expandId, setExpandId] = useState("1");
+  const [expandId, setExpandId] = useState("");
   const [filterKey, setFilter] = useState("");
 
   useEffect(() => {
@@ -51,7 +52,7 @@ export const Services = () => {
   }
 
   function handleFilterChange(e, filter) {
-    if (filter == "Clear X") {
+    if (filter === "Clear X") {
       setFilter("");
     } else {
       setFilter(filter);
@@ -59,7 +60,7 @@ export const Services = () => {
   }
 
   function buttonStyling(filter) {
-    if (filter == filterKey) {
+    if (filter === filterKey) {
       return "p-text active-btn";
     }
 
@@ -72,9 +73,9 @@ export const Services = () => {
       style={{ margin: 0, height: "100%", textAlign: "center" }}
     >
       <Navbar />
-      <h1 className="header request-header">Our Services</h1>
+      <h1 className="request-header title-text">Our Services</h1>
       <div>
-        <h1 className="title-text">Filter By</h1>
+        <h1 className="p-text">Filter By</h1>
         <ButtonGroup variant="contained" className="p-text">
           {filterKeys.map((filter) => (
             <Button
@@ -88,7 +89,7 @@ export const Services = () => {
         </ButtonGroup>
         {filterServices(filterKey, services).map((service) => (
           <Accordion
-            expanded={expandId == service.id ? true : false}
+            expanded={expandId === service.id ? true : false}
             key={service.id}
             onChange={(e) => setExpandId(service.id)}
             style={{ backgroundColor: "red" }}
@@ -99,16 +100,17 @@ export const Services = () => {
               id="panel1a-header"
               expandIcon={<FaAngleUp className="icon-color" />}
             >
-              <Typography className="header">
+              <Typography className="header ">
                 {service.title} {renderIcon(service.id)}
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography className="p-text">{service.description}</Typography>
+              <ServicesBrochure service={service} />
             </AccordionDetails>
           </Accordion>
         ))}
       </div>
+      <Button className="btn-style p-text">BOOK A CONSULTATION</Button>
     </div>
   );
 };
