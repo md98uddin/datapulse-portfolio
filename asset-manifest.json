@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/datapulse-portfolio/static/css/main.32076afc.css",
-    "main.js": "/datapulse-portfolio/static/js/main.15dd48ea.js",
+    "main.css": "/datapulse-portfolio/static/css/main.32c54dd4.css",
+    "main.js": "/datapulse-portfolio/static/js/main.ea6ceedb.js",
     "static/js/787.6afea96a.chunk.js": "/datapulse-portfolio/static/js/787.6afea96a.chunk.js",
     "static/media/roboto-latin-500-normal.woff2": "/datapulse-portfolio/static/media/roboto-latin-500-normal.f25d774ecfe0996f8eb5.woff2",
     "static/media/roboto-latin-700-normal.woff2": "/datapulse-portfolio/static/media/roboto-latin-700-normal.227c93190fe7f82de3f8.woff2",
@@ -60,12 +60,12 @@
     "static/media/roboto-greek-ext-400-normal.woff": "/datapulse-portfolio/static/media/roboto-greek-ext-400-normal.f708607d2a7290fb8bfa.woff",
     "static/media/roboto-greek-ext-700-normal.woff": "/datapulse-portfolio/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "index.html": "/datapulse-portfolio/index.html",
-    "main.32076afc.css.map": "/datapulse-portfolio/static/css/main.32076afc.css.map",
-    "main.15dd48ea.js.map": "/datapulse-portfolio/static/js/main.15dd48ea.js.map",
+    "main.32c54dd4.css.map": "/datapulse-portfolio/static/css/main.32c54dd4.css.map",
+    "main.ea6ceedb.js.map": "/datapulse-portfolio/static/js/main.ea6ceedb.js.map",
     "787.6afea96a.chunk.js.map": "/datapulse-portfolio/static/js/787.6afea96a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.32076afc.css",
-    "static/js/main.15dd48ea.js"
+    "static/css/main.32c54dd4.css",
+    "static/js/main.ea6ceedb.js"
   ]
 }
