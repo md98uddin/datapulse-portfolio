@@ -30,6 +30,9 @@ export const Navbar = () => {
             <Link to={"/pricing"}>Pricing</Link>
           </li>
           <li>
+            <Link to={"/careers"}>Careers</Link>
+          </li>
+          <li>
             <a href="tel:5168826894" style={{ marginLeft: "auto" }}>
               <FaPhone /> 516-882-6894
             </a>

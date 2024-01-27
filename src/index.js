@@ -37,6 +37,10 @@ const router = createHashRouter([
     path: "/pricing",
     element: <Pricing />,
   },
+  {
+    path: "/careers",
+    element: <Pricing />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

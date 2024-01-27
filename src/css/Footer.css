@@ -1,0 +1,43 @@
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #0065c1;
+}
+
+.item-style {
+  background-color: #0065c1;
+}
+
+.logo {
+}
+
+.title-style {
+  font-size: 1.1em;
+  letter-spacing: 1px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 0.5em 1em 1em 1em;
+  text-align: left;
+  pointer-events: visible;
+  font-size: 0.85em;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+li:hover {
+  background-color: #005baf;
+}
+
+.social-links > li {
+  font-size: 1em;
+}
