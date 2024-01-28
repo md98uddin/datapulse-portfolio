@@ -20,8 +20,8 @@ function App() {
     setErrors({ ...errors, emailError: errorState });
   };
 
-  const setInput = (key, errorState) => {
-    setInputs({ ...inputs, [key]: errorState });
+  const setInput = (key, value) => {
+    setInputs({ ...inputs, [key]: value });
   };
 
   return (

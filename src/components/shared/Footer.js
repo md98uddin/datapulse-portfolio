@@ -28,6 +28,7 @@ export const Footer = (props) => {
         errorState = true;
       } else {
         // lets finish logic to send a sign up email as well as add to subscribed list
+        props.setInput("emailAddress", email);
         errorState = false;
       }
     }
