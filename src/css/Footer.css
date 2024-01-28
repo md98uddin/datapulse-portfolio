@@ -34,7 +34,7 @@ a {
   color: white;
 }
 
-li:hover {
+li.foot-links:hover {
   background-color: #005baf;
 }
 

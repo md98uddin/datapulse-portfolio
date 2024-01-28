@@ -38,14 +38,14 @@ export const Footer = (props) => {
   };
   return (
     <footer>
-      <Box
-        sx={{
-          flexGrow: 1,
-          backgroundColor: "#0065c1",
-          padding: "1px 1px 1px 1px",
-        }}
-      >
-        <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
+        <Box
+          sx={{
+            flexGrow: 1,
+            backgroundColor: "#0065c1",
+            padding: "1px 1px 1px 1px",
+          }}
+        >
           <Grid container spacing={3}>
             <Grid item xs={12} sm={3}>
               <p>Logo</p>
@@ -71,24 +71,18 @@ export const Footer = (props) => {
                     Subscribed <FaCheck />
                   </p>
                 ) : (
-                  <ThemeProvider theme={theme}>
-                    <TextField
-                      error={contextProvider.emailError}
-                      id="input-with-sx"
-                      label="Email Address"
-                      helperText={
-                        contextProvider.emailError ? "Email is not valid" : ""
-                      }
-                      onChange={(e) => setEmail(e.target.value)}
-                    />
-                  </ThemeProvider>
+                  <TextField
+                    error={contextProvider.emailError}
+                    id="input-with-sx"
+                    label="Email Address"
+                    helperText={
+                      contextProvider.emailError ? "Email is not valid" : ""
+                    }
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
                 )}
               </Box>
-              <Button
-                variant="contained"
-                style={{ alignSelf: "center", margin: "1em 0 0 6em" }}
-                onClick={(e) => onSubscribeClick(e)}
-              >
+              <Button variant="contained" onClick={(e) => onSubscribeClick(e)}>
                 SUBSCRIBE
               </Button>
             </Grid>
@@ -96,37 +90,41 @@ export const Footer = (props) => {
               <p className="title-style">Services</p>
               <ul>
                 {services?.map((service) => (
-                  <li key={service.title}>{service.title}</li>
+                  <li className="foot-links" key={service.title}>
+                    {service.title}
+                  </li>
                 ))}
               </ul>
             </Grid>
             <Grid item xs={12} sm={3}>
               <p className="title-style">About Us</p>
               <ul>
-                <li role="link">Our Mission</li>
-                <li>Meet the Team</li>
-                <li>Client Reviews</li>
+                <li className="foot-links" role="link">
+                  Our Mission
+                </li>
+                <li className="foot-links">Meet the Team</li>
+                <li className="foot-links">Client Reviews</li>
               </ul>
             </Grid>
             <Grid item xs={12} sm={3}>
               <p className="title-style">Contact Us</p>
               <ul>
-                <li>
+                <li className="foot-links">
                   <a href="tel:5168826894">
                     <FaPhone /> 516-882-6894
                   </a>
                 </li>
-                <li>
+                <li className="foot-links">
                   <a href="mailto:datapulsetechs@gmail.com">
                     <FaMailBulk /> Email Us
                   </a>
                 </li>
-                <li>
+                <li className="foot-links">
                   <FaBuilding /> 1523 Moore Drive, New York City
                 </li>
                 <br />
                 <ul className="social-links">
-                  <li style={{ fontSize: "2em" }}>
+                  <li className="foot-links" style={{ fontSize: "2em" }}>
                     <FaFacebook /> <FaLinkedin /> <FaInstagram />
                   </li>
                 </ul>
@@ -138,8 +136,8 @@ export const Footer = (props) => {
               </p>
             </Grid>
           </Grid>
-        </ThemeProvider>
-      </Box>
+        </Box>
+      </ThemeProvider>
     </footer>
   );
 };

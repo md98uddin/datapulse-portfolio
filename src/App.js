@@ -3,9 +3,11 @@ import "./App.css";
 import { HomePage } from "./components/screens/Home";
 import { ContextWrapper } from "./components/shared/ContextWrapper";
 import { Footer } from "./components/shared/Footer";
+import { Navbar } from "./components/shared/Navbar";
 
 function App() {
   const [errors, setErrors] = useState({});
+  const [showSearch, setSearch] = useState(false);
   const [inputs, setInputs] = useState({ emailAddress: "" });
   const [success, setSuccess] = useState(false);
 
@@ -24,8 +26,13 @@ function App() {
     setInputs({ ...inputs, [key]: value });
   };
 
+  const toggleSearch = () => {
+    setSearch(!showSearch);
+  };
+
   return (
     <ContextWrapper.Provider value={errors}>
+      <Navbar showSearch={showSearch} toggleSearch={toggleSearch} />
       <div className="App">
         <HomePage />
       </div>

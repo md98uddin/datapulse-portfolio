@@ -1,0 +1,37 @@
+body {
+  background-image: linear-gradient(
+    to bottom left,
+    #f4faf8,
+    #fff8f5,
+    #f9f6ef,
+    #f9f8f3,
+    #e9f5f1,
+    #e7f1f1,
+    #e6edf5,
+    #e2f5ff,
+    #e3f1f1,
+    #ece8fc,
+    #e4f3f9
+  );
+}
+
+div.landing-header {
+  text-align: left;
+}
+
+p.welcome {
+  color: #333b38;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+p.brand {
+  color: #376ba7;
+  font-size: 3em;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+p.caption {
+  color: #7b8686;
+  font-weight: bold;
+}
