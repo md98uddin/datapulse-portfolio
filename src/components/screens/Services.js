@@ -11,7 +11,6 @@ import { MdDataArray } from "react-icons/md";
 import { BsGraphUp } from "react-icons/bs";
 import { Navbar } from "../shared/Navbar";
 import { filterKeys, services } from "../../utils/StaticData";
-import "../../css/Services.css";
 import {
   Accordion,
   AccordionDetails,

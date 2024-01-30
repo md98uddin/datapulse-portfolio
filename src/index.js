@@ -29,18 +29,18 @@ const router = createHashRouter([
     path: "/about-us",
     element: <AboutUs />,
   },
-  {
-    path: "/portfolio",
-    element: <Portfolio />,
-  },
-  {
-    path: "/pricing",
-    element: <Pricing />,
-  },
-  {
-    path: "/careers",
-    element: <Pricing />,
-  },
+  // {
+  //   path: "/portfolio",
+  //   element: <Portfolio />,
+  // },
+  // {
+  //   path: "/pricing",
+  //   element: <Pricing />,
+  // },
+  // {
+  //   path: "/careers",
+  //   element: <Pricing />,
+  // },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

@@ -1,9 +1,11 @@
+import { ThemeProvider } from "@mui/material";
 import { useEffect, useState } from "react";
 import "./App.css";
 import { HomePage } from "./components/screens/Home";
 import { ContextWrapper } from "./components/shared/ContextWrapper";
 import { Footer } from "./components/shared/Footer";
 import { Navbar } from "./components/shared/Navbar";
+import { theme } from "./components/shared/Themes";
 
 function App() {
   const [errors, setErrors] = useState({});
@@ -32,15 +34,17 @@ function App() {
 
   return (
     <ContextWrapper.Provider value={errors}>
-      <Navbar showSearch={showSearch} toggleSearch={toggleSearch} />
-      <div className="App">
-        <HomePage />
-      </div>
-      <Footer
-        onEmailSubscribe={onEmailSubscribe}
-        success={success}
-        setInput={setInput}
-      />
+      <ThemeProvider theme={theme}>
+        <Navbar showSearch={showSearch} toggleSearch={toggleSearch} />
+        <div className="App">
+          <HomePage />
+        </div>
+        <Footer
+          onEmailSubscribe={onEmailSubscribe}
+          success={success}
+          setInput={setInput}
+        />
+      </ThemeProvider>
     </ContextWrapper.Provider>
   );
 }

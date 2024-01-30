@@ -1,5 +1,4 @@
 import React from "react";
-import "../../css/AboutUs.css";
 import { Footer } from "../shared/Footer";
 import { Navbar } from "../shared/Navbar";
 

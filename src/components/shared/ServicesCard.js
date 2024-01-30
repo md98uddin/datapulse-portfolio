@@ -1,27 +1,85 @@
+import {
+  Computer,
+  DataObject,
+  ErrorOutlined,
+  PhonelinkSetup,
+  TimelineOutlined,
+} from "@mui/icons-material";
+import {
+  Avatar,
+  Box,
+  Button,
+  Card,
+  CardActions,
+  CardContent,
+  CardHeader,
+  Container,
+  Grid,
+  Typography,
+} from "@mui/material";
+import { red } from "@mui/material/colors";
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../css/ServicesCard.css";
 import { services } from "../../utils/StaticData";
 
 export const ServicesCard = () => {
-  return (
-    <div className="main">
-      <h1 className="header">Services We Offer</h1>
-      <ul className="cards">
-        {services.map((service) => (
-          <li className="cards_item" key={service.id}>
-            <div className="card">
-              <div className="card_image">
-                <img src={window.location.origin + service.img} />
-              </div>
-              <div className="card_content">
-                <h2 className="card_title">{service.title}</h2>
-                <p className="card_text">{service.description}</p>
-                <button className="btn card_btn">Read More</button>
-              </div>
-            </div>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+  function renderServiceIcon(id) {
+    console.log("id", id);
+    switch (id) {
+      case 1: {
+        return <Computer className="service-icon" />;
+      }
+      case 2: {
+        return <PhonelinkSetup className="service-icon" />;
+      }
+      case 3: {
+        return <TimelineOutlined className="service-icon" />;
+      }
+      case 4: {
+        return <DataObject className="service-icon" />;
+      }
+      default: {
+        return <ErrorOutlined className="service-icon" />;
+      }
+    }
+  }
+  return services.map((service) => (
+    <Card
+      sx={{ minWidth: 250 }}
+      style={{
+        margin: "0.75em",
+        justifyContent: "center",
+        textAlign: "center",
+      }}
+      key={service.id}
+    >
+      <CardHeader
+        avatar={
+          <Avatar
+            sx={{ bgcolor: "#c7e2d5" }}
+            aria-label="recipe"
+            style={{ marginLeft: "auto", marginRight: "0" }}
+          >
+            {renderServiceIcon(service.id)}
+          </Avatar>
+        }
+      />
+      <CardContent>
+        <Typography variant="h6" component="div" className="title">
+          {service.title}
+        </Typography>
+        <Typography variant="subtitle1" component="div" className="description">
+          {service?.description.substring(0, 50) + "..."}
+        </Typography>
+      </CardContent>
+      <CardActions disableSpacing style={{ justifyContent: "center" }}>
+        <Link to="/our-services">
+          <Button variant="text" className="read-btn">
+            READ MORE
+          </Button>
+        </Link>
+      </CardActions>
+    </Card>
+  ));
 };

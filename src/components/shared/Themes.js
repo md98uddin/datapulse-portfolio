@@ -18,13 +18,13 @@ export const theme = createTheme({
         },
       },
     },
-    MuiBox: {
-      styleOverrides: {
-        root: {
-          padding: "0 0 0 1em",
-          textAlign: "center",
-        },
-      },
-    },
+    // MuiBox: {
+    //   styleOverrides: {
+    //     root: {
+    //       padding: "0 0 0 1em",
+    //       textAlign: "center",
+    //     },
+    //   },
+    // },
   },
 });

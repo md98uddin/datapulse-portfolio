@@ -8,7 +8,7 @@ body {
     #e9f5f1,
     #e7f1f1,
     #e6edf5,
-    #e2f5ff,
+    #ccdbe4,
     #e3f1f1,
     #ece8fc,
     #e4f3f9
@@ -24,14 +24,26 @@ p.welcome {
   font-size: 2em;
   font-weight: bold;
   letter-spacing: 1px;
+  padding: 0;
+  margin: 2em 0 0 0;
 }
 p.brand {
   color: #376ba7;
-  font-size: 3em;
+  color: #376ba7;
   font-weight: bolder;
   letter-spacing: 1px;
+  padding: 0;
+  font-size: 2.5em;
+  margin: 0;
 }
 p.caption {
   color: #7b8686;
   font-weight: bold;
+  margin-bottom: 3em;
+}
+p.services {
+  color: #376ba7;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 1px;
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import { Navbar } from "../shared/Navbar";
-import "../../css/Pricing.css";
 import { Footer } from "../shared/Footer";
 
 export const Pricing = () => {

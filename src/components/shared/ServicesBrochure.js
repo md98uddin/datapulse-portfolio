@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Grid, Paper, styled, Typography } from "@mui/material";
-import "../../css/ServicesBrochure.css";
 
 export const ServicesBrochure = ({ service }) => {
   const Item = styled(Paper)(({ theme }) => ({
